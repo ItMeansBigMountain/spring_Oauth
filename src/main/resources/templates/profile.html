@@ -12,14 +12,30 @@
 </head>
 <body>
 
+<!--  DEBUG   -->
+<!--<H1 th:text="${email_verified}"></H1>-->
+<!--<H1 th:text="${given_name}"></H1>-->
+<!--<H1 th:text="${picture}"></H1>-->
+<!--<H1 th:text="${name}"></H1>-->
+<!--<H1 th:text="${exp}"></H1>-->
+<!--<H1 th:text="${family_name}"></H1>-->
+<!--<H1 th:text="${email}"></H1>-->
 
-<H1 th:text="${email_verified}"></H1>
-<H1 th:text="${given_name}"></H1>
-<H1 th:text="${picture}"></H1>
-<H1 th:text="${name}"></H1>
-<H1 th:text="${exp}"></H1>
-<H1 th:text="${family_name}"></H1>
-<H1 th:text="${email}"></H1>
+
+
+
+
+<!--BOOTSTRAP CARD-->
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" th:src="${picture}" alt="No Image Found">
+    <div class="card-body">
+        <h5 class="card-title" th:text="${name}"></h5>
+        <p class="card-text" th:text="${email}"></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
+
 
 
 

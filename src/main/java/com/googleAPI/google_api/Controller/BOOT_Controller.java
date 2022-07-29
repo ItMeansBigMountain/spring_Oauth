@@ -18,7 +18,7 @@ public class BOOT_Controller {
 
 
     @Autowired
-    private RenderService _render;
+    private RenderService renderService;
 
 
     //HOME PAGE
@@ -31,7 +31,7 @@ public class BOOT_Controller {
     //PROFILE PAGE
     @GetMapping("/home")
     public String profile(@AuthenticationPrincipal OAuth2User principal , Model model) {
-        Map<String, Object> user_info = this._render.fetch_user_data(principal);
+        Map<String, Object> user_info = this.renderService.fetch_user_data(principal);
         model.addAllAttributes(user_info);
         System.out.println(model);
         return "profile";
