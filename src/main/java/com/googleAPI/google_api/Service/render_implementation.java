@@ -27,4 +27,8 @@ public class render_implementation implements RenderService {
     public Map<String, Object> fetch_user_data(OAuth2User principal) {
         return principal.getAttributes();
     }
+
+
+
+
 }
