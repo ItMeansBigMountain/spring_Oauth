@@ -1,25 +1,18 @@
-package com.projectGroup.mySQL_REST.Service;
+package com.googleAPI.google_api.Service;
 
 import com.googleAPI.google_api.Dao.AdminDao;
 import com.googleAPI.google_api.Dao.UserDao;
-import com.googleAPI.google_api.Service.render_Service;
-import com.googleAPI.google_api.Entity.Admin;
-import com.googleAPI.google_api.Entity.User;
+import com.googleAPI.google_api.Service.RenderService;
 
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @Service
-public class render_implementation implements render_Service {
+public class render_implementation implements RenderService {
 
 
 
@@ -30,5 +23,8 @@ public class render_implementation implements render_Service {
     private UserDao userDao;
 
 
-
+    @Override
+    public Map<String, Object> fetch_user_data(OAuth2User principal) {
+        return principal.getAttributes();
+    }
 }
