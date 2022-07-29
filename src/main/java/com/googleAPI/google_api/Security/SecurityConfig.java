@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.SecurityFilterChain;
 
 
-//REDIRECT URL --> localhost:8080/login.oauth2/code/google
+//REDIRECT URL --> localhost:8080/login/oauth2/code/google
 @Configuration
 public class SecurityConfig {
 

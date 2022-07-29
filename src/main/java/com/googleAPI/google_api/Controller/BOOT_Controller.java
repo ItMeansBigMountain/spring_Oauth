@@ -28,14 +28,17 @@ public class BOOT_Controller {
     }
 
 
+
+
     //PROFILE PAGE
     @GetMapping("/home")
     public String profile(@AuthenticationPrincipal OAuth2User principal , Model model) {
         Map<String, Object> user_info = this.renderService.fetch_user_data(principal);
         model.addAllAttributes(user_info);
-        System.out.println(model);
         return "profile";
     }
+
+
 
 
 }

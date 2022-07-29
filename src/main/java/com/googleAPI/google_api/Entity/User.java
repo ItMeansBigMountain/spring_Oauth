@@ -10,13 +10,20 @@ public class User {
     @Column(name = "pk")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+
+
     private String email;
+
+
+    private String username;
 
 
     public User()
     {
 
     }
+
 
     public User(int id, String email) {
         this.id = id;
