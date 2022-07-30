@@ -1,8 +1,6 @@
 package com.googleAPI.google_api.Entity;
 
 
-import org.springframework.security.authentication.AuthenticationProvider;
-
 import javax.persistence.*;
 
 @Entity

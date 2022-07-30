@@ -1,13 +1,8 @@
 package com.googleAPI.google_api.Controller;
-
-import com.googleAPI.google_api.Entity.User;
 import com.googleAPI.google_api.Service.*;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,6 +1,6 @@
 package com.googleAPI.google_api.Security;
 
-import com.googleAPI.google_api.Dao.UserDao;
+import com.googleAPI.google_api.Entity.Dao.UserDao;
 import com.googleAPI.google_api.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
-
-import java.util.Map;
 
 
 //REDIRECT URL --> localhost:8080/login/oauth2/code/google

@@ -1,8 +1,6 @@
-package com.googleAPI.google_api.Dao;
-import com.googleAPI.google_api.Entity.Admin;
+package com.googleAPI.google_api.Entity.Dao;
 import com.googleAPI.google_api.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

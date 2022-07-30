@@ -1,8 +1,8 @@
 package com.googleAPI.google_api.Service;
 
-import com.googleAPI.google_api.Dao.AdminDao;
-import com.googleAPI.google_api.Dao.UserDao;
-import com.googleAPI.google_api.Service.RenderService;
+import com.googleAPI.google_api.Entity.Dao.AdminDao;
+import com.googleAPI.google_api.Entity.Dao.UserDao;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.core.user.OAuth2User;
