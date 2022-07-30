@@ -1,6 +1,8 @@
 package com.googleAPI.google_api.Entity;
 
 
+import org.springframework.security.authentication.AuthenticationProvider;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,17 +16,19 @@ public class Admin {
 
     private String email;
 
+    private String authProvider;
+
     private String username;
 
 
-    public Admin()
-    {
+    public Admin() {
 
     }
 
-    public Admin(int id, String email) {
-        this.id = id;
+    public Admin(String email, String authProvider, String username) {
         this.email = email;
+        this.authProvider = authProvider;
+        this.username = username;
     }
 
 
@@ -44,5 +48,19 @@ public class Admin {
         this.email = email;
     }
 
+    public String getAuthProvider() {
+        return authProvider;
+    }
 
+    public void setAuthProvider(String authProvider) {
+        this.authProvider = authProvider;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
