@@ -1,7 +1,7 @@
 package com.googleAPI.google_api.Service;
 
-import com.googleAPI.google_api.Entity.Dao.AdminDao;
-import com.googleAPI.google_api.Entity.Dao.UserDao;
+import com.googleAPI.google_api.Dao.AdminDao;
+import com.googleAPI.google_api.Dao.UserDao;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

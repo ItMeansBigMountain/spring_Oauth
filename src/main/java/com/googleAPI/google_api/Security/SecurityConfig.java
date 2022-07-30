@@ -1,6 +1,6 @@
 package com.googleAPI.google_api.Security;
 
-import com.googleAPI.google_api.Entity.Dao.UserDao;
+import com.googleAPI.google_api.Dao.UserDao;
 import com.googleAPI.google_api.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -32,8 +32,14 @@ public class SecurityConfig {
                         //SUCCESSFUL LOGIN
                         (request, response, obj) -> {
                             OAuth2User user_auth_details = (OAuth2User) obj.getPrincipal();
-                            User user = new User(user_auth_details.getAttribute("email"), user_auth_details.getAttribute("iss").toString() , user_auth_details.getName());
-                            userDao.save(user);
+
+                            //CHECK IF EMAIL ALREADY IN DATABASE
+                            if (userDao.findByEmail(user_auth_details.getAttribute("email")).isEmpty()) {
+                                User user = new User(user_auth_details.getAttribute("email"), user_auth_details.getAttribute("iss").toString(), user_auth_details.getName());
+                                userDao.save(user);
+                            }
+
+                            //REDIRECT TO USER PROFILE PAGE
                             response.sendRedirect("/home");
                         }
                 );
